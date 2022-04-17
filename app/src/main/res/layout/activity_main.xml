@@ -12,6 +12,8 @@
     android:gravity="center">
 
 <!--
+    LinearLayout은 CSS의 flex와 비슷함
+
     android:orientation
     -> CSS의 flex-direction과 비슷함
     -> vertical은 세로정렬(flex-direction: row;)
