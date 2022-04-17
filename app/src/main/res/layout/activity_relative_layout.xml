@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RelativeLayout">
+
+<!--
+    android:layout_centerInParent="true"
+    -> 부모 기준 가로세로 모두 가운데 정렬
+
+    android:layout_alignParentLeft="true"
+    -> 부모의 왼쪽에 맞춰 정렬
+    -> 옵션: Left, Right, Start, End, Top, Bottom
+
+    android:layout_toRightOf="@+id/blue_view"
+    -> blue_view의 오른쪽에 정렬
+    -> 옵션: Left, Right, Start, End
+
+    RelativeLayout은 뷰끼리 겹치기 가능
+ -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ff6666"/>
+
+    <View
+        android:id="@+id/blue_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentLeft="true"
+        android:background="#6666ff"/>
+
+    <View
+        android:id="@+id/green_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/blue_view"
+        android:background="#66ff66"/>
+
+</RelativeLayout>
