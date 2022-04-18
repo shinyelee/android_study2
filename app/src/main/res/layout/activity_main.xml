@@ -1,48 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="horizontal"
-    android:weightSum="3"
-    android:gravity="center">
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".LinearLayout">
 
-<!--
-    LinearLayout은 CSS의 flex와 비슷함
-
-    android:orientation
-    -> CSS의 flex-direction과 비슷함
-    -> vertical은 세로정렬(flex-direction: row;)
-    -> horizontal은 가로정렬(flex-direction: column;)
-
-    android:weightSum
-    -> CSS의 flex-grow와 비슷함
-    -> 각 아이템마다 weight 부여(flex-grow: 1;)
-    -> 레이아웃에 weightSum 부여
-
-    android:gravity
-    -> CSS의 justify-content: center;와 비슷함
-    -> center_vertical은 수직 기준 가운데정렬
-    -> center_horizontal은 수평 기준 가운데정렬
- -->
-
-    <View
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="#ff0000"/>
-
-    <View
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="#00ff00"/>
-
-    <View
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="#0000ff"/>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,14 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android_study2">
         <activity
+            android:name=".LinearLayout"
+            android:exported="true" />
+        <activity
             android:name=".ConstraintLayout"
             android:exported="true" />
         <activity
             android:name=".RelativeLayout"
             android:exported="true" />
+        <!-- 메인화면 -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
+            <!-- 앱이 실행될 때 가장 먼저 실행하도록 하는 코드 -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

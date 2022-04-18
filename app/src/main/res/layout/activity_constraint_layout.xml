@@ -8,9 +8,8 @@
     tools:context=".ConstraintLayout">
 
 <!--
-    ConstraintLayout은 CSS의 ~과 비슷함(계층이 하나임)
-
-    최소 3개 이상의 제약(고정할 위치 설정)을 걸어야 에러가 안 뜸
+    ConstraintLayout은 계층이 하나임
+    -> 최소 3개 이상의 제약(고정할 위치 설정)을 걸어야 에러가 안 뜸
 
     app:layout_constraintStart_toStartOf="parent"
     -> 부모 기준 왼쪽면에 아이템 왼쪽면이 닿도록 정렬
