@@ -33,7 +33,7 @@
         android:textSize="20dp"
         android:background="@drawable/rounded_corner_green"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="55dp"
         android:textAllCaps="false"/>
 
     <Button
@@ -42,7 +42,7 @@
         android:textSize="20dp"
         android:background="@drawable/rounded_corner_blue"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_height="55dp"
         android:layout_marginTop="15dp"
         android:textAllCaps="false"/>
 
@@ -53,15 +53,16 @@
         android:gravity="center_horizontal"
         android:text="Already have an account?"
         android:textColor="@color/white"
-        android:textSize="20dp"/>
+        android:textSize="18dp"/>
 
     <Button
+        android:id="@+id/login_btn"
         android:text="Login"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:background="@drawable/rounded_corner_opacity"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="55dp"
         android:layout_marginTop="15dp"
         android:textAllCaps="false"/>
 

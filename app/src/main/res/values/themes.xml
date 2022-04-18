@@ -3,8 +3,8 @@
                                        <!-- 버튼 색상 변경 -->
     <style name="Theme.Android_study2" parent="Theme.AppCompat">
         <!-- 상태바 없애기 -->
-<!--        <item name="windowActionBar">false</item>-->
-<!--        <item name="android:windowFullscreen">true</item>-->
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
         <!-- 타이틀바 없애기 -->
         <item name="windowNoTitle">true</item>
         <!-- Primary brand color. -->
