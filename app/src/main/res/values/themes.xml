@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
                                        <!-- 버튼 색상 변경 -->
-    <style name="Theme.Android_study2" parent="Theme.AppCompat">
+    <style name="Theme.Android_study2" parent="Theme.AppCompat.Light">
         <!-- 상태바 없애기 -->
         <item name="windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>

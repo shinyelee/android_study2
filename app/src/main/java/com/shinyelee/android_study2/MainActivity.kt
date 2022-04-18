@@ -34,12 +34,4 @@ class MainActivity : AppCompatActivity() {
 
     }
     
-    fun onLoginButtonClicked() {
-        Log.d(TAG, "MainActivity - onLoginButtonClicked() called")
-
-        // SecondActivity로 화면 이동
-        val intent = Intent(this, SecondActivity::class.java)
-        startActivity(intent)
-    }
-    
 }

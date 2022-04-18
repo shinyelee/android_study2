@@ -8,11 +8,11 @@
     tools:context=".SecondActivity">
 
     <Button
-        android:onClick="onBackBtnClicked"
-        android:text="뒤로가기"
-        android:textSize="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:onClick="onBackBtnClicked"
+        android:text="뒤로가기"
+        android:textSize="50dp" />
 
 </RelativeLayout>
