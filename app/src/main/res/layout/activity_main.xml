@@ -1,11 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".LinearLayout">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LinearLayout"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    android:paddingHorizontal="20dp"
+    android:weightSum="1">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:gravity="center_horizontal"
+        android:text="Get the life you want!\n Save more money."
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"/>
+
+    <Button
+        android:text="Create free account"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:background="@drawable/rounded_corner_green"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:text="Continue with facebook"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:background="@drawable/rounded_corner_blue"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginTop="15dp"
+        android:textAllCaps="false"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center_horizontal"
+        android:text="Already have an account?"
+        android:textColor="@color/white"
+        android:textSize="20dp"/>
+
+    <Button
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:background="@drawable/rounded_corner_opacity"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:textAllCaps="false"/>
+
+</LinearLayout>
