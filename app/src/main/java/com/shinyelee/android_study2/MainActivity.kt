@@ -18,12 +18,6 @@ class MainActivity : AppCompatActivity() {
         // 그릴 xml 뷰 파일을 연결(설정) 시켜줌
         setContentView(R.layout.activity_main)
 
-        // 강의(2020년)에서는 이 방법을 사용했으나, 현재(2022년) 지원하지 않는 방법임
-        // gradle에 apply plugin: 'kotlin-android-extensions' 삽입 후
-//        login_btn.setOnClickListener(View.onClickListener {
-//            onLoginButtonClicked()
-//        })
-
         // -> findViewById나 ViewBinding 사용을 권장함
         // 로그인 버튼에 클릭 리스너 설정
         findViewById<Button>(R.id.login_btn).setOnClickListener {
