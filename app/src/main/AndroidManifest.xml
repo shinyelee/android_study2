@@ -10,22 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android_study2">
         <activity
-            android:name=".HeartActivity"
-            android:exported="true" />
-        <activity
-            android:name=".SecondActivity"
-            android:exported="true" />
-        <activity
-            android:name=".LinearLayout"
-            android:exported="true" />
-        <activity
-            android:name=".ConstraintLayout"
-            android:exported="true" />
-        <activity
-            android:name=".RelativeLayout"
-            android:exported="true" />
-        <!-- 메인화면 -->
-        <activity
             android:name=".MainActivity"
             android:exported="true">
 
