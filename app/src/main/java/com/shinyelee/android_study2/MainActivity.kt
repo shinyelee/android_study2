@@ -41,6 +41,14 @@ class MainActivity : AppCompatActivity() {
         // 메모리 2개
         Log.d(TAG, "MainActivity - mySQLOpenHelper1 : $mySQLOpenHelper1")
         Log.d(TAG, "MainActivity - mySQLOpenHelper2 : $mySQLOpenHelper2")
+
+        // 매개변수 있는 클래스를 싱글턴으로
+        val mySQLOpenHelperSingleton1 = MySQLOpenHelperSingleton.getInstance(this)
+        val mySQLOpenHelperSingleton2 = MySQLOpenHelperSingleton.getInstance(this)
+        // 메모리 2개
+        Log.d(TAG, "MainActivity - mySQLOpenHelperSingleton1 : $mySQLOpenHelperSingleton1")
+        Log.d(TAG, "MainActivity - mySQLOpenHelperSingleton2 : $mySQLOpenHelperSingleton2")
+
     }
 
 }
