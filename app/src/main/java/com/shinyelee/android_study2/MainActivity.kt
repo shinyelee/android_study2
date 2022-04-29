@@ -16,39 +16,7 @@ class MainActivity : AppCompatActivity() {
     // 뷰 생성
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // 그릴 xml 뷰 파일을 연결(설정) 시켜줌
         setContentView(R.layout.activity_main)
-        Log.d(TAG, "MainActivity - onCreate() called")
-
-        // 일반 클래스
-        val myNormalClass1 = MyNormalClass()
-        val myNormalClass2 = MyNormalClass()
-        // 메모리 2개
-        Log.d(TAG, "MainActivity - myNormalClass1 : $myNormalClass1")
-        Log.d(TAG, "MainActivity - myNormalClass2 : $myNormalClass2")
-
-        // 싱글턴 클래스
-        val mySingletonClass1 = MySingletonClass
-        val mySingletonClass2 = MySingletonClass
-        // 메모리 1개
-        Log.d(TAG, "MainActivity - mySingletonClass1 : $mySingletonClass1")
-        Log.d(TAG, "MainActivity - mySingletonClass2 : $mySingletonClass2")
-
-        // 매개변수 있는 클래스
-        val mySQLOpenHelper1 = MySQLOpenHelper(this)
-        val mySQLOpenHelper2 = MySQLOpenHelper(this)
-        // 메모리 2개
-        Log.d(TAG, "MainActivity - mySQLOpenHelper1 : $mySQLOpenHelper1")
-        Log.d(TAG, "MainActivity - mySQLOpenHelper2 : $mySQLOpenHelper2")
-
-        // 매개변수 있는 클래스를 싱글턴으로
-        val mySQLOpenHelperSingleton1 = MySQLOpenHelperSingleton.getInstance(this)
-        val mySQLOpenHelperSingleton2 = MySQLOpenHelperSingleton.getInstance(this)
-        // 메모리 2개
-        Log.d(TAG, "MainActivity - mySQLOpenHelperSingleton1 : $mySQLOpenHelperSingleton1")
-        Log.d(TAG, "MainActivity - mySQLOpenHelperSingleton2 : $mySQLOpenHelperSingleton2")
-
     }
 
 }
