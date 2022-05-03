@@ -9,7 +9,11 @@ class Data(val profile: Int, val name: String)
 
 // 매개변수 v : View
 // 상속 RecyclerView.ViewHolder(v)
-class CustomViewHolder(v : View) : RecyclerView.ViewHolder(v) {}
+class CustomViewHolder(v : View) : RecyclerView.ViewHolder(v) {
+    // 여기서 에러 발생
+//    val profile = v.iv_custom
+//    val name = v.tv_custom
+}
 
 class CustomAdapter(val DataList:ArrayList<Data>) : RecyclerView.Adapter<CustomViewHolder>() {
 
