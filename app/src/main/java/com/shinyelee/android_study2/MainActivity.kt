@@ -38,6 +38,15 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+        binding.bottomNavigationView.setOnNavigationItemSelectedListener {
+            when(it.itemId) {
+                R.id.home -> binding.viewPager.setCurrentItem(0)
+                R.id.favorite -> binding.viewPager.setCurrentItem(1)
+                R.id.profile -> binding.viewPager.setCurrentItem(2)
+            }
+            return@setOnNavigationItemSelectedListener true
+        }
+
     }
 
     inner class pagerAdapter : PagerAdapter() {
