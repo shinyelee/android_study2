@@ -28,25 +28,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.viewPager.adapter = pagerAdapter()
 
-        binding.viewPager.addOnPageChangeListener(object : ViewPager.SimpleOnPageChangeListener(){
-            override fun onPageSelected(position: Int) {
-                when(position) {
-                    0 -> binding.bottomNavigationView.selectedItemId = R.id.home
-                    1 -> binding.bottomNavigationView.selectedItemId = R.id.favorite
-                    2 -> binding.bottomNavigationView.selectedItemId = R.id.profile
-                }
-            }
-        })
-
-        binding.bottomNavigationView.setOnNavigationItemSelectedListener {
-            when(it.itemId) {
-                R.id.home -> binding.viewPager.setCurrentItem(0)
-                R.id.favorite -> binding.viewPager.setCurrentItem(1)
-                R.id.profile -> binding.viewPager.setCurrentItem(2)
-            }
-            return@setOnNavigationItemSelectedListener true
-        }
-
     }
 
     inner class pagerAdapter : PagerAdapter() {
