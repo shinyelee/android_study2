@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager.widget.PagerAdapter
+import androidx.viewpager.widget.ViewPager
 import com.shinyelee.android_study2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +27,16 @@ class MainActivity : AppCompatActivity() {
         viewList.add(layoutInflater.inflate(R.layout.fragment_profile, null))
 
         binding.viewPager.adapter = pagerAdapter()
+
+        binding.viewPager.addOnPageChangeListener(object : ViewPager.SimpleOnPageChangeListener(){
+            override fun onPageSelected(position: Int) {
+                when(position) {
+                    0 -> binding.bottomNavigationView.selectedItemId = R.id.home
+                    1 -> binding.bottomNavigationView.selectedItemId = R.id.favorite
+                    2 -> binding.bottomNavigationView.selectedItemId = R.id.profile
+                }
+            }
+        })
 
     }
 
