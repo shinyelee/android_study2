@@ -17,7 +17,30 @@ class CustomViewHolder(v : View) : RecyclerView.ViewHolder(v) {
     val name = v.tv_custom
 }
 
-class CustomAdapter(val DataList:ArrayList<Data>, val context: Context) : RecyclerView.Adapter<CustomViewHolder>() {
+class CustomAdapter(val context: Context) : RecyclerView.Adapter<CustomViewHolder>() {
+
+    val DataList = arrayListOf(
+        Data(R.drawable.paw, "1번"),
+        Data(R.drawable.paw, "2번"),
+        Data(R.drawable.paw, "3번"),
+        Data(R.drawable.paw, "4번"),
+        Data(R.drawable.paw, "5번"),
+        Data(R.drawable.paw, "6번"),
+        Data(R.drawable.paw, "7번"),
+        Data(R.drawable.paw, "8번"),
+        Data(R.drawable.paw, "9번"),
+        Data(R.drawable.paw, "10번"),
+        Data(R.drawable.paw, "11번"),
+        Data(R.drawable.paw, "12번"),
+        Data(R.drawable.paw, "13번"),
+        Data(R.drawable.paw, "14번"),
+        Data(R.drawable.paw, "15번"),
+        Data(R.drawable.paw, "16번"),
+        Data(R.drawable.paw, "17번"),
+        Data(R.drawable.paw, "18번"),
+        Data(R.drawable.paw, "19번"),
+        Data(R.drawable.paw, "20번")
+    )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
         val cellForRow = LayoutInflater.from(context).inflate(R.layout.custom_list, parent, false)
