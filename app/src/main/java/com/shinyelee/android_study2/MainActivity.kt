@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 //        setContentView(R.layout.activity_main)
 
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
-        binding.recyclerView.adapter = CustomAdapter(DataList)
+        binding.recyclerView.adapter = CustomAdapter(DataList, this)
     }
 
     override fun onDestroy() {
