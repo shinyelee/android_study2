@@ -28,6 +28,16 @@ class MainActivity : AppCompatActivity() {
 
         binding.viewPager.adapter = pagerAdapter()
 
+        binding.tabLayout.setupWithViewPager(binding.viewPager)
+
+        binding.tabLayout.getTabAt(0)?.setText("Home")
+        binding.tabLayout.getTabAt(1)?.setText("Favorite")
+        binding.tabLayout.getTabAt(2)?.setText("Profile")
+
+        binding.tabLayout.getTabAt(0)?.setIcon(R.drawable.ic_baseline_home_24)
+        binding.tabLayout.getTabAt(1)?.setIcon(R.drawable.ic_baseline_favorite_24)
+        binding.tabLayout.getTabAt(2)?.setIcon(R.drawable.ic_baseline_person_24)
+
     }
 
     inner class pagerAdapter : PagerAdapter() {
