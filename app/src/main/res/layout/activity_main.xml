@@ -9,16 +9,18 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <!-- drawable 하위의 Vector Asset 삽입 -->
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:tint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/ic_baseline_departure_board_24" />
-        <!-- srcCompat 대신 android:src 사용해야 에러 안 뜸 -->
+        app:srcCompat="@drawable/ic_baseline_create_24"
+        />
+        <!-- 얘도 app:srcCompat 대신 android:src 사용해야 에러 안 뜸 -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
