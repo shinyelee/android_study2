@@ -13,14 +13,16 @@ class MainActivity : AppCompatActivity() {
     private var vBinding : ActivityMainBinding? = null
     private val binding get() = vBinding!!
 
-    var viewList = ArrayList<View>()
-
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         vBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        
+        binding.switch1.setOnCheckedChangeListener { compoundButton, b ->
+            println(b)
+        }
+        binding.switch1.isChecked = true
     }
 
     override fun onDestroy() {
