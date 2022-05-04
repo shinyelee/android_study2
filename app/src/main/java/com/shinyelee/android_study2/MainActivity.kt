@@ -18,43 +18,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-
         vBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        viewList.add(layoutInflater.inflate(R.layout.fragment_home, null))
-        viewList.add(layoutInflater.inflate(R.layout.fragment_favorite, null))
-        viewList.add(layoutInflater.inflate(R.layout.fragment_profile, null))
-
-        binding.viewPager.adapter = pagerAdapter()
-
-        binding.tabLayout.setupWithViewPager(binding.viewPager)
-
-        binding.tabLayout.getTabAt(0)?.setText("Home")
-        binding.tabLayout.getTabAt(1)?.setText("Favorite")
-        binding.tabLayout.getTabAt(2)?.setText("Profile")
-
-        binding.tabLayout.getTabAt(0)?.setIcon(R.drawable.ic_baseline_home_24)
-        binding.tabLayout.getTabAt(1)?.setIcon(R.drawable.ic_baseline_favorite_24)
-        binding.tabLayout.getTabAt(2)?.setIcon(R.drawable.ic_baseline_person_24)
-
-    }
-
-    inner class pagerAdapter : PagerAdapter() {
-
-        override fun getCount() = viewList.size
-
-        override fun isViewFromObject(view: View, `object`: Any) = view == `object`
-
-        override fun instantiateItem(container: ViewGroup, position: Int): Any {
-            var curView = viewList[position]
-            binding.viewPager.addView(curView)
-            return curView
-        }
-
-        override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
-            binding.viewPager.removeView(`object` as View)
-        }
 
     }
 
