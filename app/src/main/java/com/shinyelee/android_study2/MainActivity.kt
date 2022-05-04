@@ -19,10 +19,10 @@ class MainActivity : AppCompatActivity() {
         vBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         
-        binding.switch1.setOnCheckedChangeListener { compoundButton, b ->
+        binding.checkBox.setOnCheckedChangeListener { compoundButton, b ->
             println(b)
         }
-        binding.switch1.isChecked = true
+        binding.checkBox.isChecked = true
     }
 
     override fun onDestroy() {
