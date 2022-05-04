@@ -15,11 +15,6 @@ class MainActivity : AppCompatActivity() {
         vBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.toggleButton.setOnCheckedChangeListener { compoundButton, b ->
-            println(b)
-        }
-        binding.toggleButton.isChecked = true
-
     }
 
     override fun onDestroy() {
