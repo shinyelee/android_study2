@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.shinyelee.android_study2">
+
+    <!-- 웹뷰 사용 위해 권한 허용함 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -13,7 +17,6 @@
             android:name=".MainActivity"
             android:exported="true">
 
-            <!-- 앱이 실행될 때 가장 먼저 실행하도록 하는 코드 -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
