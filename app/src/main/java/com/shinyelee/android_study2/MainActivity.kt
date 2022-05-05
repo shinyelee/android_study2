@@ -15,8 +15,6 @@ class MainActivity : AppCompatActivity() {
         vBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.imageView.setImageResource(R.drawable.ic_baseline_create_24)
-
     }
 
     override fun onDestroy() {

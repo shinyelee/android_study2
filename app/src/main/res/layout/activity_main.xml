@@ -9,23 +9,4 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/paw" />
-    <!--
-        만약 app:srcCompat에서 에러가 난다면
-        build.gradle (:app) 파일로 이동,
-        defaultConfig 하위에
-        vectorDrawables.useSupportLibrary = true
-        추가하면 됨
-    -->
-
 </androidx.constraintlayout.widget.ConstraintLayout>
