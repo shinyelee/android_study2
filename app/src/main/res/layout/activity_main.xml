@@ -9,18 +9,23 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        android:tint="@color/white"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_create_24"
-        />
-        <!-- 얘도 app:srcCompat 대신 android:src 사용해야 에러 안 뜸 -->
+        app:srcCompat="@drawable/paw" />
+    <!--
+        만약 app:srcCompat에서 에러가 난다면
+        build.gradle (:app) 파일로 이동,
+        defaultConfig 하위에
+        vectorDrawables.useSupportLibrary = true
+        추가하면 됨
+    -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
