@@ -9,16 +9,14 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <CalendarView
-        android:id="@+id/calendarView"
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:minDate="01/01/2022"
-        android:maxDate="12/31/2022"/>
-    <!-- minData, maxData로 범위 설정(MM/DD/YYYY) -->
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
