@@ -2,10 +2,7 @@ package com.shinyelee.android_study2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.SeekBar
 import com.shinyelee.android_study2.databinding.ActivityMainBinding
-import java.util.*
-import kotlin.concurrent.timer
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,21 +15,11 @@ class MainActivity : AppCompatActivity() {
         vBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.seekBar2.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-
-            override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
-                println(p1)
-            }
-
-            override fun onStartTrackingTouch(p0: SeekBar?) {
-                println("움직임 시작")
-            }
-
-            override fun onStopTrackingTouch(p0: SeekBar?) {
-                println("움직임 끝")
-            }
-
-        })
+        binding.ratingBar.setOnRatingBarChangeListener { ratingBar, fl, b ->
+            println(fl)
+        }
+        binding.ratingBar.rating = 3.5f
+        // 5점만점에 기본값 3.5로 시작
 
     }
 

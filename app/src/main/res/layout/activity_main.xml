@@ -9,17 +9,13 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <SeekBar
-        android:id="@+id/seekBar2"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="200dp"
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:max="12"
-        android:progress="7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <!-- android:progress 범위 0~max 내에서 설정 가능 -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
