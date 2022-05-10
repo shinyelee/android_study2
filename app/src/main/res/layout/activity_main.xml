@@ -9,8 +9,8 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Spinner
-        android:id="@+id/spinner"
+    <SearchView
+        android:id="@+id/searchView"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.SearchView
 import com.shinyelee.android_study2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -12,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     private var vBinding : ActivityMainBinding? = null
     private val binding get() = vBinding!!
 
-    var items = arrayOf("나연", "정연", "모모", "사나", "지효", "미나", "다현", "채영", "쯔위")
+    private var MyList = arrayOf("yeji", "ryujin", "chaeryeong", "yuna", "lia")
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -20,20 +21,23 @@ class MainActivity : AppCompatActivity() {
         vBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val myAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, items)
-        binding.spinner.adapter = myAdapter
-        binding.spinner.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
+        binding.searchView.setOnQueryTextListener(object:SearchView.OnQueryTextListener {
 
-            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                println(p2)
-                items[p2]
+            override fun onQueryTextSubmit(p0: String?): Boolean {
+                println(p0 + " 입력완료")
+                return true
             }
 
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-                println("선택 안 함")
+            override fun onQueryTextChange(p0: String?): Boolean {
+                if(p0 != "") {
+                    val curList = MyList.filter { x -> x.toLowerCase().contains(p0?.toLowerCase().toString()) }
+                    for (i in curList) println(i)
+                    println("----------")
+                }
+                return true
             }
 
-        }
+        })
 
     }
 
