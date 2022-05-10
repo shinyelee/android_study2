@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         vBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+        binding.seekBar2.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
 
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
                 println(p1)
