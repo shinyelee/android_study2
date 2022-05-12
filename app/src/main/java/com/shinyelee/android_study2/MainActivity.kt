@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.SearchView
+import com.google.android.material.tabs.TabLayout
 import com.shinyelee.android_study2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

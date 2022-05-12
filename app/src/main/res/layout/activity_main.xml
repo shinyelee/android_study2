@@ -1,85 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-
-        <androidx.appcompat.widget.Toolbar
-            android:layout_height="?attr/actionBarSize"
-            android:layout_width="match_parent"
-            app:layout_scrollFlags="scroll|enterAlways">
-
-        </androidx.appcompat.widget.Toolbar>
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|enterAlways"
-
-            app:tabMode="scrollable">
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Tab1" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Tab2" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Tab3" />
-
-        </com.google.android.material.tabs.TabLayout>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.core.widget.NestedScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            tools:context=".MainActivity">
-
-            <TextView
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet bibendum risus, ac imperdiet nulla. Nam ultrices ligula est, ac viverra est elementum at. Quisque sed quam lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis porttitor libero non purus vulputate, eget convallis turpis consequat. Curabitur cursus nisi leo, vel feugiat tellus sodales ut. Mauris massa augue, varius sit amet velit blandit, ultrices vehicula purus. Quisque sagittis hendrerit nibh, quis laoreet lacus tincidunt sit amet. Aenean ac maximus massa. Duis et nunc ut sapien semper commodo et in mauris. Vestibulum ultricies augue eu mi sagittis, non fermentum massa facilisis. Suspendisse accumsan tortor turpis, ac blandit ante congue vel. Cras ipsum tortor, eleifend quis porta sit amet, bibendum et velit. Cras iaculis massa a est rutrum, eu rutrum sem dapibus. Ut elit risus, molestie eget lorem in, porttitor congue orci. In hac habitasse platea dictumst.
-                Pellentesque in eros fermentum, luctus sem sit amet, eleifend leo. Mauris dignissim quis elit eu ornare. Nam et tortor eget ipsum laoreet consequat vel sit amet erat. Nullam dignissim faucibus lectus a vehicula. Curabitur cursus arcu a orci ornare ultricies. Donec convallis efficitur felis vel sodales. Fusce ac ligula congue, bibendum nunc in, tempus enim. Mauris sollicitudin, metus id tincidunt bibendum, neque felis sagittis est, ac facilisis risus neque a diam. Nulla semper eros leo, et ullamcorper est semper id.
-                Curabitur non laoreet libero. Donec justo nibh, rhoncus eget tristique vitae, consectetur et urna. Nulla ornare nisl turpis, et egestas risus tristique et. Vestibulum ultricies neque in libero luctus, vitae ultrices nulla tincidunt. Vestibulum metus erat, luctus non suscipit ultrices, tincidunt in leo. Proin imperdiet, nulla non varius ultricies, est urna eleifend metus, sollicitudin dignissim enim nibh ut augue. Praesent iaculis, nisl vel consequat euismod, metus neque pretium mauris, in condimentum neque tortor vitae mauris. Nullam vulputate lorem quis orci pellentesque, pharetra iaculis orci euismod. Donec ut augue vel felis hendrerit efficitur sit amet sit amet massa. Maecenas aliquam auctor tortor a molestie. Nullam id facilisis leo. Quisque id dolor mauris. Duis vel imperdiet nisi. Cras congue risus at dui ornare, sit amet interdum diam semper. Nulla quis nunc dolor.
-                Ut ornare massa tellus, vehicula feugiat nulla iaculis ac. Duis vel risus eget quam accumsan sagittis. Pellentesque et risus a mauris accumsan interdum. Donec tellus nulla, iaculis sed purus tristique, elementum feugiat sapien. Suspendisse potenti. Morbi vel arcu risus. Pellentesque ex risus, dictum ut nibh at, dignissim tempor nisl. Nullam facilisis, mauris non posuere aliquam, justo ligula rutrum mauris, vitae aliquet libero diam ac justo. Integer vitae vulputate lectus. Nam efficitur pretium erat, ut lobortis mauris feugiat non. Integer eu lorem metus.
-                Nam sed condimentum odio. Duis viverra nulla sit amet mauris feugiat, quis placerat arcu auctor. Ut at sapien sed magna sollicitudin feugiat vel in purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus condimentum metus pellentesque magna ultrices egestas. Integer eget ipsum eu quam dignissim ultrices facilisis id ante. Duis dignissim leo at lacus tristique, a tincidunt metus consequat. Cras et lorem auctor, dapibus enim eu, vehicula enim. Proin sodales at nibh sit amet commodo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent vehicula turpis arcu, non placerat nulla dignissim et."
-                android:textSize="20dp"
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.core.widget.NestedScrollView>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:src="@android:drawable/ic_input_add"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp" />
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
