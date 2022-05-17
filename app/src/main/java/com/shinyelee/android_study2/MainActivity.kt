@@ -1,8 +1,10 @@
 package com.shinyelee.android_study2
 
 import android.content.Context
+import android.media.AudioManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.shinyelee.android_study2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -16,20 +18,14 @@ class MainActivity : AppCompatActivity() {
         vBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val pref = getSharedPreferences("pref", Context.MODE_PRIVATE)
+    }
 
-        // 저장
-        pref.edit().putString("키", "값").apply()
-
-        // 불러오기
-        val value = pref.getString("키", "저장안됨")
-
-        // 키 제거
-        pref.edit().remove("키").apply()
-
-        // 전체 제거
-        pref.edit().clear().apply()
-
+    fun Audio(v: View) {
+        var audioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
+        audioManager.getStreamVolume(AudioManager.STREAM_MUSIC)
+        audioManager.getStreamVolume(AudioManager.STREAM_VOICE_CALL)
+        audioManager.getStreamVolume(AudioManager.STREAM_RING)
+        audioManager.getStreamVolume(AudioManager.STREAM_ALARM)
     }
 
     override fun onDestroy() {
