@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.shinyelee.android_study2"
-        minSdk 23 // TimePicker 사용하기 위해 21에서 23으로 높여줌
+        minSdk 21
         targetSdk 32
         versionCode 1
         versionName "1.0"

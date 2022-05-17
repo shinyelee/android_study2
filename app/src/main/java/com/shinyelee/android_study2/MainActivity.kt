@@ -1,5 +1,6 @@
 package com.shinyelee.android_study2
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.shinyelee.android_study2.databinding.ActivityMainBinding
@@ -15,10 +16,19 @@ class MainActivity : AppCompatActivity() {
         vBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // i는 시, i2는 분
-        binding.timePicker.setOnTimeChangedListener { timePicker, i, i2 ->
-            println(i.toString() + ":" + i2.toString())
-        }
+        val pref = getSharedPreferences("pref", Context.MODE_PRIVATE)
+
+        // 저장
+        pref.edit().putString("키", "값").apply()
+
+        // 불러오기
+        val value = pref.getString("키", "저장안됨")
+
+        // 키 제거
+        pref.edit().remove("키").apply()
+
+        // 전체 제거
+        pref.edit().clear().apply()
 
     }
 
