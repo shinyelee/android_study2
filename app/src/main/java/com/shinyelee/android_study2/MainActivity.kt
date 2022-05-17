@@ -1,7 +1,10 @@
 package com.shinyelee.android_study2
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.Vibrator
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -22,6 +25,13 @@ class MainActivity : AppCompatActivity() {
         vBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btn.setOnClickListener { Vibration(1000L) }
+
+    }
+
+    fun Vibration(len:Long) {
+        val vibrator = getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as Vibrator
+        vibrator.vibrate(len)
     }
 
     override fun onDestroy() {
