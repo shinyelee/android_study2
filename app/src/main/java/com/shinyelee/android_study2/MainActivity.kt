@@ -1,10 +1,8 @@
 package com.shinyelee.android_study2
 
-import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.EditText
-import androidx.appcompat.app.AlertDialog
 import com.shinyelee.android_study2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -20,28 +18,14 @@ class MainActivity : AppCompatActivity() {
 
         binding.btn.setOnClickListener {
 
-            var ad = AlertDialog.Builder(this)
+            var intent = Intent()
 
-            ad.setIcon(R.mipmap.ic_launcher)
-            ad.setTitle("제목")
-            ad.setMessage("내용")
-            ad.setView(EditText(this))
+            intent.setAction(Intent.ACTION_SEND)
+            intent.setType("text/plain")
+            intent.putExtra(Intent.EXTRA_SUBJECT, title)
+            intent.putExtra(Intent.EXTRA_TEXT, "내용")
 
-            ad.setPositiveButton("Yes", object:DialogInterface.OnClickListener {
-                override fun onClick(p0: DialogInterface?, p1: Int) {
-                    println("Yes 클릭")
-                    p0?.dismiss()
-                }
-            })
-
-            ad.setNegativeButton("No", object:DialogInterface.OnClickListener {
-                override fun onClick(p0: DialogInterface?, p1: Int) {
-                    println("No 클릭")
-                    p0?.dismiss()
-                }
-            })
-
-            ad.show()
+            startActivity(Intent.createChooser(intent, "공유하기"))
 
         }
 
