@@ -3,9 +3,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.shinyelee.android_study2">
 
-    <!-- 인터넷/와이파이 접근 위해 코드 추가 -->
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"

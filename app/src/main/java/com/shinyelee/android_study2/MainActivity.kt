@@ -1,10 +1,11 @@
 package com.shinyelee.android_study2
 
-import android.content.Context
-import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.shinyelee.android_study2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -17,16 +18,34 @@ class MainActivity : AppCompatActivity() {
         vBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btn.setOnClickListener { NetworkCheck(binding.btn) }
+        binding.btn1.setOnClickListener {
+            supportFragmentManager.beginTransaction().replace(R.id.frameLayout, OneFragment()).commit()
+        }
+
+        binding.btn2.setOnClickListener {
+            supportFragmentManager.beginTransaction().replace(R.id.frameLayout, TwoFragment()).commit()
+        }
     }
 
-    fun NetworkCheck(v: View) {
-        val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        println(connectivityManager.activeNetworkInfo?.isConnected)
-    }
     override fun onDestroy() {
         vBinding = null
         super.onDestroy()
     }
 
+}
+
+class OneFragment: Fragment() {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ) = inflater.inflate(R.layout.frag1, container, false)
+}
+
+class TwoFragment: Fragment() {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ) = inflater.inflate(R.layout.frag2, container, false)
 }
